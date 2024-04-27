@@ -1,1 +1,2 @@
 # cluedo-sheet
+this project will be something to let me play cluedo with my friends without the need to write my clues on a paper of sheet. I will use my own page with database and score tracker to let me insert my clues faster
