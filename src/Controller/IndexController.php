@@ -11,9 +11,12 @@ class IndexController extends AbstractController
     #[Route('/index')]
     public function indexAction(): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        $user = $this->getUser();
+
         return $this->render('/pages/index.html.twig',
             parameters: [
-            'name' => 'Emilian'
+            'name' => $user->getUserIdentifier()
             ]
     );
     }
